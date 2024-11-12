@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "f5d99ff6-810a-409c-b346-a23dca830176",
+		"name": "UCAP INTEGRATION TO CRP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32965798"
+	},
+	"item": [
+		{
+			"name": "Login_Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Username\": \"UCAP\",\r\n\"Password\": \"Pz6534NnGjyt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://swift-test.ubagroup.com:7443/api/account/login",
+					"protocol": "https",
+					"host": [
+						"swift-test",
+						"ubagroup",
+						"com"
+					],
+					"port": "7443",
+					"path": [
+						"api",
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Third_Party_request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"encryptedData\": \r\n\"axKxryHsFQ5YOfKZPf0y7S48463CqXaoJnlFeHJaUoAEV5coy+PrAaHZ+puqWuNRgEcZdJheZM605wn9tX4w7gfVIlsBzJx+8z9P+QoUXjTVtVEhOatmQoHrPokfiVAm4DIX2bNE0cZ1/TvYhIVdY34cUfRS+8KtrN35zUB2FSIfN8C10Uff+DnuCj/fkgAb5QcaXZT4S1dkK37Yh7PGSjiYQAXDBxFP3RIdBnEjCwFAbKzWrEC9yT+/oWZUOisg0KXMolj+Wjj6y7CmwX2Qy5Eh7wd/91A324Vy2+pf11JIYbTopz0wJw/xafyqBA9sXGFA4ffAoS5rYisE3PeuVAK2UXTvGIxsd5gfPO9N26kvGlg2TsfEIGH1ECpUgSxKSAVLlPyZoXNnfqAuBfikjBqBH5jKFwKVZqALBju686Z/Dw2TXJFvW3I/wOUvxe/nc2UuoY0bl9cVec/GibvwucaFU40OX5QCGV8ol9YXNfxgCDrfvWYBDHyjj6SOOq9ApfdWXw0XfJkVzhdQursLWyFnrwv8+6jBcOxAm8wnkk8=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://swift-test.ubagroup.com:7443/api/v2/job/newthirdpartyrequest",
+					"protocol": "https",
+					"host": [
+						"swift-test",
+						"ubagroup",
+						"com"
+					],
+					"port": "7443",
+					"path": [
+						"api",
+						"v2",
+						"job",
+						"newthirdpartyrequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch_Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"TrackingID\": \"099924102250402\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://swift-test.ubagroup.com:7443/api/job/fetchrequeststatus",
+					"protocol": "https",
+					"host": [
+						"swift-test",
+						"ubagroup",
+						"com"
+					],
+					"port": "7443",
+					"path": [
+						"api",
+						"job",
+						"fetchrequeststatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET DOCUMENT BY TRACKING ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swift-test.ubagroup.com:7443/api/job/getdocumentsbytrackingId?trackingId=099924102295601",
+					"protocol": "https",
+					"host": [
+						"swift-test",
+						"ubagroup",
+						"com"
+					],
+					"port": "7443",
+					"path": [
+						"api",
+						"job",
+						"getdocumentsbytrackingId"
+					],
+					"query": [
+						{
+							"key": "trackingId",
+							"value": "099924102295601"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
